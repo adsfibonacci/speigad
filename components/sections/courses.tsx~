@@ -1,0 +1,27 @@
+import { Card, CardBody, CardHeader } from "@nextui-org/card";
+import { Accordion } from "@nextui-org/accordion";
+import { Divider } from "@nextui-org/react";
+
+export function courses() {
+	return (
+		<div>
+			<div>
+				<Card className="bg-zinc-800 text-[20px] text-slate-300">
+					<CardHeader>BME</CardHeader>
+				</Card>
+				<Accordion>
+				</Accordion>
+			</div>
+		</div>
+	);
+}
+
+
+
+
+
+
+
+
+
+

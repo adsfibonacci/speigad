@@ -1,0 +1,28 @@
+@layer utilities {
+  .custom-button {
+    @apply inline-block p-1 text-black font-bold text-lg relative;
+    font-family: 'Roboto', sans-serif; /* No need for @apply since font declaration does not belong to Tailwind */
+  }
+
+  .custom-button::before,
+  .custom-button::after {
+    content: "";
+    @apply absolute border-2 opacity-0;
+    border-color: #000000; /* Custom border color */
+  }
+
+  .custom-button::before {
+    @apply top-0 left-0 w-4 h-2;
+    border-width: 4px 0 0 4px;
+  }
+
+  .custom-button::after {
+    @apply bottom-0 right-0 w-4 h-2;
+    border-width: 0 4px 4px 0;
+  }
+
+  .custom-button:hover::before,
+  .custom-button:hover::after {
+    @apply opacity-100;
+  }
+}

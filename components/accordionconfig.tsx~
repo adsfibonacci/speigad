@@ -1,0 +1,7 @@
+export interface accordionItemsClass {
+	base: "w-full bg-zinc-800 rounded-lg shadow-slate-400 shadow-lg data-disabled:bg-zinc-800",
+	title: "font-normal text-[24px] text-slate-300",
+	trigger: "px-2 py-0 data-[hover=true]:bg-slate-900 rounded-lg h-14 flex items-center data-[disabled=true]:bg-zinc-800",
+	indicator: "text-medium",
+	content: "text-[18px] text-slate-300 px-2",
+}

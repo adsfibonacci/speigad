@@ -1,113 +1,145 @@
+"use client";
+
+import { useState } from "react";
+import { NextUIProvider, Snippet } from "@nextui-org/react";
+import Link from "next/link";
 import Image from "next/image";
 
+import { CornerButton, TitleButton } from "@/components/corner-button";
+import { work } from "@/components/sections/work";
+import { about } from "@/components/sections/about";
+import { DRP } from "@/components/sections/drp";
+import { courses } from "@/components/sections/courses";
+import { Activities } from "@/components/sections/activities";
+import { Resume } from "@/components/sections/resume";
+
+
+import { accordionItemsClass } from "@/components/accordionconfig";
+import { GithubLogo, LinkedinLogo } from "@/components/logos";
+
+
 export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+	const [isWork, setIsWork] = useState(false);
+	const [isAbout, setIsAbout] = useState(false);
+	const [isActivities, setIsActivites] = useState(false);
+	const [isDRP, setIsDRP] = useState(false);
+	const [isCourses, setIsCourses] = useState(false);
+	const [isResume, setIsResume] = useState(false);
 
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+	const homeHandle = () => {
+		setIsAbout(false);
+		setIsActivites(false);
+		setIsWork(false);
+		setIsDRP(false);
+		setIsCourses(false);
+		setIsResume(false);
+	};
+	const aboutHandle = () => {
+		setIsAbout(true);
+		setIsActivites(false);
+		setIsWork(false);
+		setIsDRP(false);
+		setIsCourses(false);
+		setIsResume(false);
+	};
+	const activitiesHandle = () => {
+		setIsAbout(false);
+		setIsActivites(true);
+		setIsWork(false);
+		setIsDRP(false);
+		setIsCourses(false);
+		setIsResume(false);
+	}
+	const workHandle = () => {
+		setIsAbout(false);
+		setIsActivites(false);
+		setIsWork(true);
+		setIsDRP(false);
+		setIsCourses(false);
+		setIsResume(false);
+	};
+	const drpHandle = () => {
+		setIsAbout(false);
+		setIsActivites(false);
+		setIsWork(false);
+		setIsDRP(true);
+		setIsCourses(false);
+		setIsResume(false);
+	}
+	const coursesHandle = () => {
+		setIsAbout(false);
+		setIsActivites(false);
+		setIsWork(false);
+		setIsDRP(false);
+		setIsCourses(true);
+		setIsResume(false);
+	}
+	const resumeHandle = () => {
+		setIsAbout(false);
+		setIsActivites(false);
+		setIsWork(false);
+		setIsDRP(false);
+		setIsCourses(false);
+		setIsResume(true);
+	}
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+	const itemClasses: accordionItemsClass = {
+		base: "w-full bg-zinc-900 rounded-lg shadow-slate-600 shadow-lg data-disabled:bg-zinc-900",
+		title: "font-normal text-[24px] text-slate-200",
+		trigger: "px-2 py-0 data-[hover=true]:bg-slate-900 rounded-lg h-14 flex items-center data-[disabled=true]:bg-zinc-900",
+		indicator: "text-medium",
+		content: "text-[18px] text-slate-200 px-2",
+	};
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  );
-}
+	return (
+		<NextUIProvider>
+			<div className="h-screen flex">
+				<div className="flex flex-col w-1/4">
+					<div className="flex flex-col h-1/4 w-full gap-2 pb-8 items-center top-left-0">
+						<TitleButton>Alexander Speigle</TitleButton>
+						<Snippet className="bg-transparent border-2 rounded-lg text-sm w-fit" symbol="" size="sm">
+							speigad@umich.edu							
+						</Snippet>
+						<Snippet className="bg-transparent border-2 rounded-lg text-sm w-fit" symbol="" size="sm">
+							+1 (248)-482-9381
+						</Snippet>
+						<div className="flex flex-row gap-2">
+							<Link href="https://www.linkedin.com/in/alexander-speigle-aa5724265"><LinkedinLogo className="fill-current text-foreground hover:text-primary" /></Link>
+							<Link href="https://github.com/adsfibonacci"><GithubLogo className="fill-current text-foreground hover:text-primary" /></Link>
+						</div>
+					</div>
+					<div className="flex pt-16 gap-8">
+						<div className="flex flex-col w-1/2">
+							<CornerButton className="w-fit" onClick={homeHandle}>Home</CornerButton>
+							<CornerButton className="w-fit" onClick={activitiesHandle}>Activities</CornerButton>
+							<CornerButton className="w-fit" onClick={drpHandle}>Math Projects</CornerButton>
+							<CornerButton className="w-fit" onClick={resumeHandle}>Resume</CornerButton>
+						</div>
+						<div className="flex flex-col w-1/2">
+							<CornerButton className="w-fit" onClick={aboutHandle}>About Me</CornerButton>
+							<CornerButton className="w-fit" onClick={workHandle}>Work Experience</CornerButton>
+							<CornerButton className="w-fit" onClick={coursesHandle}>Courses</CornerButton>							
+						</div>
+					</div>
+					<div className="image-container w-1/8 absolute bottom-8 left-8 rounded-lg border border-black bg-gradient-to-b from-[#4C5666] to-[#8A939F] shadow-slate-600 shadow-lg">
+						<Image
+							src="/suit-picture-crop.png"
+							alt="Image"
+							quality={100}
+							width={250}
+							height={250}
+						/>
+					</div>
+				</div>
+				<div className="flex flex-col w-3/4 h-full items-left justify-center py-8">
+					{isWork && work(itemClasses)}
+					{isAbout && about()}
+					{isActivities && Activities(itemClasses)}
+					{isDRP && DRP(itemClasses)}
+					{isCourses && courses(itemClasses)}
+					{isResume && Resume()}
+				</div>
+			</div>
+		</NextUIProvider>
+	);
+};
