@@ -207,9 +207,9 @@ const sections = menuItems.slice(1).map((item) =>
 const aboutSection = document.getElementById("about");
 if (aboutSection) {
   const paragraphs = [
-    "I am pursuing a Masters in Biomedical Engineering at the University of Michigan. My undergraduate degrees were in Mathematical Biology and Biomedical engineering, also from the University of Michigan. I also completed a minor in biochemistry and computer science. I am focusing in systems biology and computational biology. Academic interests include combinatorial optimization, machine learning, and chaos theory.",
+    "I am pursuing a Masters in Biomedical Engineering at the University of Michigan. My undergraduate degrees were in Mathematical Biology and Biomedical engineering, also from the University of Michigan. I  completed a minor in biochemistry and computer science. I am focusing in systems biology and computational biology. Academic interests include combinatorial optimization, machine learning, and chaos/control theory.",
     "I am working in Dr. Paul Jensen's lab on the minimal genome project, which relies heavily on combinatorial optimization and reinforcement learning. The lab website is ",
-    "Programming languages I am familiar with are Python, C++, Matlab, R, Bash, Mathematica, and simulation tools I use are SolidWorks, COPASI, and COMSOL."
+    "Programming languages I am familiar with are Python, C++, Matlab, R, Bash, Mathematica, and simulation tools I am familiar with are SolidWorks, FreeCAD, COPASI, and COMSOL."
   ];
 
   paragraphs.forEach((text, index) => {
@@ -283,9 +283,9 @@ if (resumeSection) {
 const activitiesSection = document.getElementById("activities");
 if (activitiesSection) {
   const clubs = [
+  { title: "Math Corp and Math Circle", description: "The Math Corp at U(M) is a summer camp that strives to teach kids of varying levels and backgrounds about math and how to enjoy it. It is a kids-teaching-kids model which teaches more experienced kids how to teach math to their peers. The same group of people leads the U(M) Math Circle, where guest lecturers create and lead sessions about math topics that are not typically taught in public curriculum, with college students aiding with activities related to the topic. A session I have led was about Benford's Law and I will lead several more in the future." },
     { title: "Walking Club", description: "The morning math walkers meet at 6AM weekdays and explore Ann Arbor. I used to run the evening walks, but the position has been transfered to a current member of the Society of Undergraduate Math Students (SUMS)."},
     { title: "Math Club", description: "Guest lecturers from several graduate programs are given an opportunity to present a math topic of interest at an undergraduate level and increase interest in their research. I will give a talk in early January on the Price of Anarchy." },
-    { title: "Math Corp and Math Circle", description: "The Math Corp at U(M) is a summer camp that strives to teach kids of varying levels and backgrounds about math and how to enjoy it. It is a kids-teaching-kids model which teaches more experienced kids how to teach math to their peers. The same group of people leads the U(M) Math Circle, where guest lecturers create and lead sessions about math topics that are not typically taught in public curriculum, with college students aiding with activities related to the topic. I lead the session teaching about <em>Benfords Law</em> and will lead several more in the future. " },
     { title: "SEE Camp", description: "The Summer Engineering Exploration Camp is hosted through the Society of Women Engineers to expose high schoolers to different disciplines and career paths." },
   ];
 
@@ -308,7 +308,7 @@ if (activitiesSection) {
 const workSection = document.getElementById("experience");
 if (workSection) {
   const experiences = [
-    { title: "Jensen Lab - Graduate Researcher", description: `I enjoyed the course in automated science I took with Dr. Jensen and followed up with more design of experiments coursework. I joined the lab for research this past semester to work on the minimal genome project. This is developing a mathematical model to remove as many genes as possible from <em>Streptococcus Mutans</em> while maintaining viability of the cell line. Techniques I use are regression analysis, feature selection, and Monte-Carlo tree search.` },  
+    { title: "Jensen Lab - Graduate Researcher", description: `I enjoyed the course in automated science I took with Dr. Jensen and followed up with more design of experiments coursework. I joined the lab for research this past semester to work on the minimal genome project. This is developing a mathematical model to remove as many genes as possible from <em>Streptococcus Mutans</em> while maintaining viability of the cell line. Techniques I use are regression analysis, feature selection, and Monte-Carlo tree search. I am currently working on implementing transformer models, convolutional neural networks, and long-short term memory neural networks as competing models for predicting growth given a genome.` },  
     { title: "Metacoder Bioinformatics Intern", description: "My role at Metacoder preprocessed and analyzed metabolic data for inputs into deep learning algorithms. I used natural language processing algorithms to build disease networks then graph theory to analyze data. My work here is with very large and relatively low dimensional datasets." },
     { title: "Linear Algebra Course Grader", description: "This is a temporary position through the Biomedical Engineering department during the academic semester. My job was to review homeworks submitted by undergraduates taking an introduction to linear algebra and statistics course. " },
     { title: "Student Information Technology Consultant", description: "The SITC role is a temporary position through the Mathematics department during academic semesters. This was an IT consultant job that resolved issues that occured in the computer labs for computational math courses." },
@@ -336,7 +336,7 @@ if (coursesSection) {
   const courseCategories = [
     { 
       title: "Mathematics", 
-      items: ["Honors Mathematics - 1D Calculus, Exterior Calculus, and Linear Algebra", "Probability and Statistics", "Regression", "Combinatorics", "Ordinary Differential Equations - Bifurcations and Chaos", "Topology - Pointset and Algebraic", "Linear and Nonlinear Programming", "Real and Complex Analysis" ] 
+      items: ["Honors Mathematics - 1D Calculus, Exterior Calculus, and Linear Algebra", "Probability and Statistics", "Linear and Nonlinear Regression", "Combinatorics and Graph Theory", "Ordinary Differential Equations - Bifurcations, chaos, and control theory", "Topology - Pointset and Algebraic", "Linear and Nonlinear Programming", "Real and Complex Analysis" ] 
     },
     { 
       title: "Engineering", 
@@ -344,7 +344,7 @@ if (coursesSection) {
     },
     { 
       title: "Computer Science", 
-      items: ["Machine Learning", "Algorithm Design", "Automated Science", "Computational Biology" ] 
+      items: ["Machine Learning", "Deep Learning", "Reinforcement Learning", "Algorithm Design", "Automated Science", "Computational Biology" ] 
     },
     { 
       title: "Chemistry", 
