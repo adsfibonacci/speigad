@@ -285,6 +285,7 @@ if (activitiesSection) {
   const clubs = [
     { title: "Walking Club", description: "The morning math walkers meet at 6AM weekdays and explore Ann Arbor. I used to run the evening walks, but the position has been transfered to a current member of the Society of Undergraduate Math Students (SUMS)."},
     { title: "Math Club", description: "Guest lecturers from several graduate programs are given an opportunity to present a math topic of interest at an undergraduate level and increase interest in their research. I will give a talk in early January on the Price of Anarchy." },
+    { title: "Math Corp and Math Circle", description: "The Math Corp at U(M) is a summer camp that strives to teach kids of varying levels and backgrounds about math and how to enjoy it. It is a kids-teaching-kids model which teaches more experienced kids how to teach math to their peers. The same group of people leads the U(M) Math Circle, where guest lecturers create and lead sessions about math topics that are not typically taught in public curriculum, with college students aiding with activities related to the topic. I lead the session teaching about <em>Benfords Law</em> and will lead several more in the future. " },
     { title: "SEE Camp", description: "The Summer Engineering Exploration Camp is hosted through the Society of Women Engineers to expose high schoolers to different disciplines and career paths." },
   ];
 
