@@ -227,7 +227,7 @@ const resumeSection = document.getElementById("resume");
 if (resumeSection) {
     // Download link replaced with "Open in new tab"
     const openLink = document.createElement("a");
-    openLink.href = "/alexander-speigle-full-resume.pdf"; // path relative to public folder
+    openLink.href = "/public/alexander-speigle-full-resume.pdf"; // path relative to public folder
     openLink.textContent = "View Resume PDF";
     openLink.target = "_blank"; // open in a new tab
     openLink.rel = "noopener noreferrer";
