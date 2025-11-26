@@ -2,9 +2,9 @@ import express from "express";
 import path from "path";
 const app = express();
 const port = process.env.PORT || 3000;
-// Serve static assets from public
+// Serve compiled client code
+app.use("/static", express.static(path.join(process.cwd(), "dist")));
 app.use("/public", express.static(path.join(process.cwd(), "public")));
-// Minimal HTML shell
 app.get("/", (_req, res) => {
     res.send(`
     <!DOCTYPE html>
