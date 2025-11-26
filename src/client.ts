@@ -237,7 +237,7 @@ if (aboutSection) {
 
 // ----- Floating Profile Image -----
 const floatingImage = document.createElement("img");
-floatingImage.src = "/suit-picture-crop.png";
+floatingImage.src = "public/suit-picture-crop.png";
 floatingImage.alt = "Profile Image";
 floatingImage.style.position = "fixed";
 floatingImage.style.bottom = "20px";
@@ -255,7 +255,7 @@ const resumeSection = document.getElementById("resume");
 if (resumeSection) {
   // Download link replaced with "Open in new tab"
   const openLink = document.createElement("a");
-  openLink.href = "/alexander-speigle-full-resume.pdf"; // path relative to public folder
+  openLink.href = "public/alexander-speigle-full-resume.pdf"; // path relative to public folder
   openLink.textContent = "View Resume PDF";
   openLink.target = "_blank";               // open in a new tab
   openLink.rel = "noopener noreferrer";
@@ -270,7 +270,7 @@ if (resumeSection) {
 
   // PDF preview (embedded using <iframe>)
   const pdfFrame = document.createElement("iframe");
-  pdfFrame.src = "/alexander-speigle-full-resume.pdf"; // Make sure your PDF is in the public folder
+  pdfFrame.src = "public/alexander-speigle-full-resume.pdf"; // Make sure your PDF is in the public folder
   pdfFrame.width = "100%";
   pdfFrame.height = "300px";
   pdfFrame.style.border = "1px solid #ccc";
@@ -391,7 +391,7 @@ if (projectsSection) {
     { 
       title: "The Euclidean Algorithm", 
       description: "The Euclidean Algorithm is a quick way to find the greatest common divisor (GCD) between any two integers. We will define rings, ring norms, and Euclidean domains where the algorithm is guaranteed to converge, then find the GCD of elements in the Gaussian integers and polynomial rings. In particular, we will focus on the worst case time complexity in the different scenarios.",
-      slidesPath: "/euclidean-algorithm.pdf",
+      slidesPath: "public/euclidean-algorithm.pdf",
       desmosLink: "https://www.desmos.com/calculator/03bvipexfg"
     },
     { 
