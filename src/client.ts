@@ -208,7 +208,7 @@ const aboutSection = document.getElementById("about");
 if (aboutSection) {
   const paragraphs = [
     "I am pursuing a Masters in Biomedical Engineering at the University of Michigan. My undergraduate degrees were in Mathematical Biology and Biomedical engineering, also from the University of Michigan. I  completed a minor in biochemistry and computer science. I am focusing in systems biology and computational biology. Academic interests include combinatorial optimization, machine learning, and chaos/control theory.",
-    "I am working in Dr. Paul Jensen's lab on the minimal genome project, which relies heavily on combinatorial optimization and reinforcement learning. The lab website is ",
+    "I am working in Dr. Paul Jensen's lab on the minimal genome project, which relies heavily on combinatorial optimization and reinforcement learning. I am familiar with several different paradigms for AI and automated science. The lab website is ",
     "Programming languages I am familiar with are Python, C++, Matlab, R, Bash, Mathematica, and simulation tools I am familiar with are SolidWorks, FreeCAD, COPASI, and COMSOL."
   ];
 
@@ -285,7 +285,7 @@ if (activitiesSection) {
   const clubs = [
   { title: "Math Corp and Math Circle", description: "The Math Corp at U(M) is a summer camp that strives to teach kids of varying levels and backgrounds about math and how to enjoy it. It is a kids-teaching-kids model which teaches more experienced kids how to teach math to their peers. The same group of people leads the U(M) Math Circle, where guest lecturers create and lead sessions about math topics that are not typically taught in public curriculum, with college students aiding with activities related to the topic. A session I have led was about Benford's Law and I will lead several more in the future." },
     { title: "Walking Club", description: "The morning math walkers meet at 6AM weekdays and explore Ann Arbor. I used to run the evening walks, but the position has been transfered to a current member of the Society of Undergraduate Math Students (SUMS)."},
-    { title: "Math Club", description: "Guest lecturers from several graduate programs are given an opportunity to present a math topic of interest at an undergraduate level and increase interest in their research. I will give a talk in early January on the Price of Anarchy." },
+    { title: "Math Club", description: "Guest lecturers from several graduate programs are given an opportunity to present a math topic of interest at an undergraduate level and increase interest in their research. I will give a talk in early January on the Price of Anarchy which has applications in network flows, mechanical physics, and gene transcription and is used to understand selfish behavior in game theory." },
     { title: "SEE Camp", description: "The Summer Engineering Exploration Camp is hosted through the Society of Women Engineers to expose high schoolers to different disciplines and career paths." },
   ];
 
@@ -309,7 +309,7 @@ const workSection = document.getElementById("experience");
 if (workSection) {
   const experiences = [
     { title: "Jensen Lab - Graduate Researcher", description: `I enjoyed the course in automated science I took with Dr. Jensen and followed up with more design of experiments coursework. I joined the lab for research this past semester to work on the minimal genome project. This is developing a mathematical model to remove as many genes as possible from <em>Streptococcus Mutans</em> while maintaining viability of the cell line. Techniques I use are regression analysis, feature selection, and Monte-Carlo tree search. I am currently working on implementing transformer models, convolutional neural networks, and long-short term memory neural networks as competing models for predicting growth given a genome.` },  
-    { title: "Metacoder Bioinformatics Intern", description: "My role at Metacoder preprocessed and analyzed metabolic data for inputs into deep learning algorithms. I used natural language processing algorithms to build disease networks then graph theory to analyze data. My work here is with very large and relatively low dimensional datasets." },
+    { title: "Metacoder Bioinformatics Intern", description: "My role at Metacoder preprocessed and analyzed metabolic data for inputs into deep learning algorithms. I used natural language processing algorithms to build disease networks then graph theory to analyze clinical data. I also optimized software to reduce required compute resources and prevent out of memory errors." },
     { title: "Linear Algebra Course Grader", description: "This is a temporary position through the Biomedical Engineering department during the academic semester. My job was to review homeworks submitted by undergraduates taking an introduction to linear algebra and statistics course. " },
     { title: "Student Information Technology Consultant", description: "The SITC role is a temporary position through the Mathematics department during academic semesters. This was an IT consultant job that resolved issues that occured in the computer labs for computational math courses." },
     { title: "Chandrasekaran Lab - Undergraduate Researcher", description: "The lab work here introduced me to the role of optimization research in machine learning algorithms. I also extended my experience with probabilistic machine learning from surface level courses, as well as employed them in a metabolics role. I also compared predictions to baseline methods such as flux balance analysis and other tools in the Cobra toolbox."},
@@ -348,7 +348,7 @@ if (coursesSection) {
     },
     { 
       title: "Chemistry", 
-      items: ["Organic Chemistry", "Protein Chemistry", "Physical Chemistry", "Bioinorganic Chemistry", "Genetics" ] 
+      items: ["Organic Chemistry", "Protein Chemistry", "Physical Chemistry", "Bioinorganic Chemistry", "Genetics - Human and Prokaryotic" ]
     },
   ];
 
